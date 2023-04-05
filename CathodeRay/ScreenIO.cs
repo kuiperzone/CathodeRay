@@ -274,6 +274,7 @@ namespace KuiperZone.CathodeRay
         /// </summary>
         public static bool IsCursorVisible
         {
+#pragma warning disable CA1416
             get { return IsWindows ? Console.CursorVisible : _isCursorVisible; }
 
             set
@@ -281,6 +282,7 @@ namespace KuiperZone.CathodeRay
                 if (IsWindows) Console.CursorVisible = value;
                 else _isCursorVisible = value;
             }
+#pragma warning restore CA1416
         }
 
         /// <summary>
